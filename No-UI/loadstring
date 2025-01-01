@@ -6,8 +6,8 @@ getgenv().Settings = {
         HitPart = "HumanoidRootPart" 
     },
     FOV = {
-        Enabled = true, -- Toggle FOV circle on/off
-        Size = 100, -- Default FOV circle radius
+        Enabled = true,
+        Size = 100, 
         Color = Color3.fromRGB(255, 0, 0) 
     },
     BoxESP = {
@@ -16,4 +16,4 @@ getgenv().Settings = {
     }
 }
 
-loadstring(game:HttpGet("http://finity.vip/scripts/finity_lib.lua"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/3bvz/Rizuki/refs/heads/main/No-UI/main.lua"))()
