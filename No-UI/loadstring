@@ -1,0 +1,19 @@
+getgenv().Settings = {
+    CameraLock = {
+        ToggleKey = Enum.KeyCode.E,
+        PredictionX = 0.1, 
+        PredictionY = 0.1, 
+        HitPart = "HumanoidRootPart" 
+    },
+    FOV = {
+        Enabled = true, -- Toggle FOV circle on/off
+        Size = 100, -- Default FOV circle radius
+        Color = Color3.fromRGB(255, 0, 0) 
+    },
+    BoxESP = {
+        Enabled = true, 
+        Color = Color3.fromRGB(0, 255, 0) 
+    }
+}
+
+loadstring(game:HttpGet("http://finity.vip/scripts/finity_lib.lua"))()
