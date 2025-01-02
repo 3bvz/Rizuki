@@ -1,3 +1,10 @@
+--[[
+made by:
+ - 3bvz
+ - f8c9
+any skidded scripts will be dmca'd or will have issues
+]]--
+
 local UserInputService = game:GetService("UserInputService")
 local RunService = game:GetService("RunService")
 local Players = game:GetService("Players")
@@ -5,11 +12,11 @@ local StarterGui = game:GetService("StarterGui")
 local localPlayer = Players.LocalPlayer
 local mouse = localPlayer:GetMouse()
 local isEnabled = true
-local currentlyHighlighted = nil
 
+local currentlyHighlighted = nil
 local function highlightCharacter(character)
     local highlight = Instance.new("Highlight")
-    highlight.Name = "PHighlight"
+    highlight.Name = "NeonHighlight"
     highlight.FillColor = Color3.new(1, 0, 0) 
     highlight.FillTransparency = 0.5
     highlight.OutlineTransparency = 1 
@@ -39,7 +46,7 @@ local function sendNotification(title, text, duration)
         Icon = "rbxassetid://91865098616901"
     })
 end
-sendNotification("RizukiTB", "Press 'Q' to toggle the triggerbot.", 2)
+sendNotification("RizukiTB", "Press 'Q' to toggle the script.", 2)
 
 RunService.RenderStepped:Connect(function()
     if not isEnabled then
@@ -50,9 +57,8 @@ RunService.RenderStepped:Connect(function()
         return
     end
 
-    local mousePosition = Vector2.new(mouse.X, mouse.Y)
     local camera = workspace.CurrentCamera
-
+    local mousePosition = Vector2.new(mouse.X, mouse.Y)
     local rayOrigin = camera.CFrame.Position
     local rayDirection = (camera:ScreenPointToRay(mouse.X, mouse.Y)).Direction * 500
 
